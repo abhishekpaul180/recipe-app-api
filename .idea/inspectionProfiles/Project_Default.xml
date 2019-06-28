@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="app.calc" />
+          <option value="app.core.admin.core" />
         </list>
       </option>
     </inspection_tool>
