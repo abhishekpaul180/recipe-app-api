@@ -6,6 +6,7 @@
         <list>
           <option value="app.calc" />
           <option value="app.core.admin.core" />
+          <option value="super.update" />
         </list>
       </option>
     </inspection_tool>
