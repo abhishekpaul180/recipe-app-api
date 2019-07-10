@@ -56,3 +56,13 @@ class ModelTests(TestCase):
         )
 
         self.assertEqual(str(tag), tag.name)
+
+    def test_store_link_str(self):
+        """Test the ingredient string representation"""
+        store_link = models.Store_link.objects.create(
+            user=sample_user(),
+            name='http://www.myntra.com'
+        )
+
+        self.assertEqual(str(store_link), store_link.name)
+
