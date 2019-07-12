@@ -29,3 +29,4 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Tag)
 admin.site.register(models.Store_link)
+admin.site.register(models.PicUpload)

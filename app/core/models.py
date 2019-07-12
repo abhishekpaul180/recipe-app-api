@@ -61,3 +61,20 @@ class Store_link(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PicUpload(models.Model):
+    """picUpload object"""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
+    )
+    title = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+    designer_details = models.CharField(max_length=255, blank=True)
+    contact_info = models.CharField(max_length=255, blank=True)
+    store_link = models.ManyToManyField('Store_link')
+    tags = models.ManyToManyField('Tag')
+
+    def __str__(self):
+        return self.title

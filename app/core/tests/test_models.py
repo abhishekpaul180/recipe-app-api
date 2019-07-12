@@ -66,3 +66,13 @@ class ModelTests(TestCase):
 
         self.assertEqual(str(store_link), store_link.name)
 
+    def test_picUpload_str(self):
+        """Test the upload string representation"""
+        picUpload = models.PicUpload.objects.create(
+            user=sample_user(),
+            title='One Piece',
+            price=5.00
+        )
+
+        self.assertEqual(str(picUpload), picUpload.title)
+
